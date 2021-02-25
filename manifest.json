@@ -1,0 +1,59 @@
+{
+    "name": "Better Firefly",
+    "author": "Finley Cooper",
+    "version": "1.2.6",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://gordano.fireflycloud.net/login/*"],
+            "js": ["login_redirect.js"],
+            "run_at": "document_start"
+        },
+        {
+            "matches": ["https://gordano.fireflycloud.net/*"],
+            "js": ["global_improvements.js"],
+            "exclude_matches": [
+                "https://gordano.fireflycloud.net/login/*"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://gordano.fireflycloud.net/dashboard"],
+            "js": ["dashboard_improvements.js", "dashboard_colourChange.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://gordano.fireflycloud.net/set-tasks"],
+            "js": ["tasks_colourChange.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://gordano.fireflycloud.net/set-tasks/*"],
+            "exclude_matches": ["https://gordano.fireflycloud.net/set-tasks"],
+            "js": ["set_taskColourChange.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://gordano.fireflycloud.net/*"],
+            "exclude_matches": ["https://gordano.fireflycloud.net/login/*",
+                                "https://gordano.fireflycloud.net/set-tasks/*",
+                                "https://gordano.fireflycloud.net/dashboard"],
+            "js": ["global_colourChange.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://gordano.fireflycloud.net/*",
+        "storage"
+    ],
+    "description": "Auto-login, dark mode and other helpful features for the Gordano Firefly Website.",
+
+    "icons": {
+        "48": "img48.png",
+        "32": "img32.png",
+        "16": "img16.png"
+    }
+}

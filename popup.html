@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+             body {
+                height: 380px;
+                width: 200px;
+                font-family: "Source Sans Pro", sans-serif;
+                background-color: #252525;
+                color: #ffffff;
+            }
+            button {
+                padding: 6px 12px;
+                transition-duration: 0.2s;
+                background-color: #1f1f1f;
+                color: white;
+                border-radius: 3px;
+                border: 2px solid #1f1f1f
+            }
+            button:hover {
+                background-color: #525252;
+            }
+        </style>
+        <title>Settings</title>
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <p style="font-size: 20px;">Better Firefly Settings</p>
+        <input type="checkbox" id="darkmode">
+        <label for="darkmode">Dark Mode</label><br>
+        <input type="checkbox" id="pfpremove">
+        <label for="checkbox">Profile Picture Remover</label><br>
+        <input type="checkbox" id="autologin">
+        <label for="autologin">Auto Login</label><br><br>
+        <p style="font-size: 16px;">Colours (Beta)</p>
+        <p style="font-size: 11px";>Only active on a couple of pages for now</p>
+        <input type="radio" id="colour_default" name="colour">
+        <label for="colour_default">Default</label><br>
+        <input type="radio" id="colour_green" name="colour">
+        <label for="colour_green"></label>Seafoam<br>
+        <input type="radio" id="colour_red" name="colour">
+        <label for="colour_red">Crimson</label><br>
+        <input type="radio" id="colour_orange" name="colour">
+        <label for="colour_orange">Tangerine</label><br>
+        <input type="radio" id="colour_magenta" name="colour">
+        <label for="colour_magenta">Magenta</label><br>
+        <input type="radio" id="colour_purple" name="colour">
+        <label for="colour_purple">Amethyst</label><br><br>
+        <label for="name">Custom Name</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <button type="button" id="submit" value="Submit">Submit</button>
+        <p id="refresh-msg" style="visibility: hidden; color: red">Changes Saved - If you have any firefly tabs open, refresh to see changes</p>
+    </body>
+</html>
