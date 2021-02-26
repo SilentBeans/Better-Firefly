@@ -40,8 +40,29 @@ function setDarkmode() {
     document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div:nth-child(3) > a > span").style.color = "white";
     document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div:nth-child(4) > a > span").style.color = "white";
     document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div:nth-child(5) > a > span").style.color = "white";
+    document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > a").addEventListener("click", function() {
+        if (this.getAttribute("aria-expanded") == "false") {
+            setTimeout(() => {
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1ufjzz4 > a.css-1mgddn0").style.backgroundColor = "#222222";
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1ufjzz4 > ul").childNodes.forEach((node) => {
+                node.firstChild.style.backgroundColor = "#222222";
+                node.firstChild.style.color = "#ffffff"
+            });
+    
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1ufjzz4 > a.css-arx4sa").style.backgroundColor = "#222222";
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1ufjzz4").style.backgroundColor = "#222222";
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1ufjzz4 > a.css-arx4sa").style.color = "#ffffff";
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1mro4jk").childNodes.forEach((node) => {
+                node.style.backgroundColor = "#222222";
+            })
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1mro4jk").style.backgroundColor = "#222222";
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > span").style.borderColor = "#222222";
+            document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div.css-s8vo47 > div > div > div.css-1mro4jk > a.css-1u2uwgm").style.color = "#ffffff"
+            }, 0);
+        }
+    });
 };
 
 function removePFP() {
     document.querySelector("#root > div:nth-child(5) > div > section > div:nth-child(2) > div > button > img").remove(); // REMOVE PFP
-};
+}
