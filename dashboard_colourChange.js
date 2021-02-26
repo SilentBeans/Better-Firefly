@@ -134,7 +134,6 @@ function changePageColours(mainColour) {
 
     //days at the top
     try {
-        document.querySelector("#ffComponent_6 > div > div.ff_container-dashboard-section__main > div:nth-child(1) > div.ff-timetable-thegrid > div > div > ol.ff-timetable-day.ff-timetable-today").style.backgroundColor = mainColour["lightest"];
         document.querySelector("#ffComponent_6 > div > div.ff_container-dashboard-section__main > div:nth-child(1) > div.ff-timetable-thegrid > div > div > ol.ff-timetable-day.ff-timetable-today > li.ff-timetable-columntitle.ff-timetable-block").style.borderColor = mainColour["darker"];
         document.querySelector("#ffComponent_6 > div > div.ff_container-dashboard-section__main > div:nth-child(1) > div.ff-timetable-thegrid > ol > li.ff-timetable-block.ff-timetable-break.ff-timetable-nolabel").style.backgroundColor = mainColour["lighter"]
         document.querySelector("#ffComponent_6 > div > div.ff_container-dashboard-section__main > div:nth-child(1) > div.ff-timetable-thegrid > ol > li:nth-child(8)").style.backgroundColor = mainColour["lighter"]
