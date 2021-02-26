@@ -52,8 +52,8 @@
     "description": "Auto-login, dark mode and other helpful features for the Gordano Firefly Website.",
 
     "icons": {
+        "16": "img16.png",
         "48": "img48.png",
-        "32": "img32.png",
-        "16": "img16.png"
+        "128": "img128.png"
     }
 }
