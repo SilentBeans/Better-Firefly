@@ -52,59 +52,62 @@ chrome.storage.local.get(["colour", "dark_mode"], function(result) {
     if (result.colour == "green") {
         changePageColours(greenColours)
         if (result.dark_mode == "true") {
-            changeGordanoLogo("gordano-green-black.png", "#252525")
+            changeGordanoLogo("lZcKw5O", "#252525")
         }
         else {
-            changeGordanoLogo("gordano-green-white.png", "#fff")
+            changeGordanoLogo("66KPEh7", "#fff")
         };
     }
 
     else if (result.colour == "magenta") {
         changePageColours(magentaColours)
         if (result.dark_mode == "true") {
-            changeGordanoLogo("gordano-magenta-black.png", "#252525")
+            changeGordanoLogo("WNcohnn", "#252525")
         }
         else {
-            changeGordanoLogo("gordano-magenta-white.png", "#fff")
+            changeGordanoLogo("bE8oIxP", "#fff")
         };
     }
 
     else if (result.colour == "red") {
         changePageColours(redColours)
         if (result.dark_mode == "true") {
-            changeGordanoLogo("gordano-red-black.png", "#252525")
+            changeGordanoLogo("PZe9Guz", "#252525")
         }
         else {
-            changeGordanoLogo("gordano-red-white.png", "#fff")
+            changeGordanoLogo("urhPbjB", "#fff")
         };
     }
 
     else if (result.colour == "orange") {
         changePageColours(orangeColours)
         if (result.dark_mode == "true") {
-            changeGordanoLogo("gordano-orange-black.png", "#252525")
+            changeGordanoLogo("6GAtzYQ", "#252525")
         }
         else {
-            changeGordanoLogo("gordano-orange-white.png", "#fff")
+            changeGordanoLogo("L9YpaiG", "#fff")
         };
     }
 
     else if (result.colour == "purple") {
         changePageColours(purpleColours)
         if (result.dark_mode == "true") {
-            changeGordanoLogo("gordano-purple-black.png", "#252525")
+            changeGordanoLogo("kBjUosZ", "#252525")
         }
         else {
-            changeGordanoLogo("gordano-purple-white.png", "#fff")
+            changeGordanoLogo("wThfmH3", "#fff")
         };
     }
 
     else if (result.colour == "default") {
         if (result.dark_mode == "true") {
-            changeGordanoLogo("gordano-default-black.png", "#252525")
+            changeGordanoLogo("lACgu3a", "#252525")
         };
     };
 });
+
+
+
 
 
 
@@ -263,5 +266,5 @@ function changePageColours(mainColour) {
 
 function changeGordanoLogo(logoURL, logoBackground) {
     document.querySelector("#school-header > a > div").style.backgroundColor = logoBackground;
-    document.querySelector("#school-header > a > div > div > div").style = `background-image:url(https://finleycooper.co.uk/static/images/better-firefly/${logoURL})`;
+    document.querySelector("#school-header > a > div > div > div").style = `background-image:url(https://imgur.com/${logoURL}.png)`;
 }
