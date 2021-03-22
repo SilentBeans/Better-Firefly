@@ -7,6 +7,7 @@ Features include:
 -Custom Name
 -Profile Picture remover
 -Unnecessary dashboard clutter
+-Sync name and pfp with discord
 
 Link to download page
 https://finleycooper.co.uk/better-firefly/redirect-to-store
