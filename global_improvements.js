@@ -1,10 +1,13 @@
-chrome.storage.local.get(['dark_mode', 'pfp_status', 'name'], function(result) {
+chrome.storage.local.get(['dark_mode', 'pfp_status', 'name', "avatarHash", "discordID"], function(result) {
     if (result.dark_mode == "true") {
         setDarkmode();
     };
     if (result.pfp_status == "true") {
         removePFP();
-    };
+    }
+    if (result.avatarHash != undefined && result.pfp_status == "false") {
+        document.querySelector("#root > div:nth-child(5) > div > section > div:nth-child(2) > div > button > img").setAttribute("src", `https://cdn.discordapp.com/avatars/${result.discordID}/${result.avatarHash}.png`)
+    }
     if (result.name != null) {
         document.querySelector("#root > div:nth-child(5) > div > section > div:nth-child(2) > div > button > span").innerHTML = result.name;
     };
@@ -16,7 +19,7 @@ logoTag = document.createElement("img");
 logosrc = document.createAttribute("src");
 logoWidth = document.createAttribute("width");
 logoHeight = document.createAttribute("height");
-logosrc.value = "https://finleycooper.co.uk/static/images/better-firefly/white-logo.png";
+logosrc.value = "https://imgur.com/LQCEG1k.png";
 logoWidth.value = "24";
 logoHeight.value = "24";
 logoTag.setAttributeNode(logosrc);
@@ -26,7 +29,7 @@ document.querySelector("#react-navigation > div > div > div > div > div.css-2e6e
 
 document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div:nth-child(5) > a > span").innerHTML = "Better Firefly Help";
 
-var helpLink = document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div:nth-child(5) > a");
+let helpLink = document.querySelector("#react-navigation > div > div > div > div > div.css-2e6eiu > div:nth-child(5) > a");
 helpLink.href = "https://finleycooper.co.uk/better-firefly/help";
 helpLink.setAttribute("target", "_blank")
 helpLink.setAttribute("rel", "noopener noreferrer")
